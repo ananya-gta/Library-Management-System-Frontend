@@ -6,6 +6,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AllBooksComponent } from './all-books/all-books.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { IssuedBooksComponent } from './issued-books/issued-books.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomePageComponent,
     AllBooksComponent,
     NavbarComponent,
+    IssuedBooksComponent,
   ],
   imports: [
     BrowserModule,
