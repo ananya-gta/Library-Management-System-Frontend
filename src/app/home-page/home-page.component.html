@@ -13,7 +13,6 @@
     />
   </head>
   <body>
-    <!-- partial:index.partial.html -->
     <main>
       <div class="content">
         <h2>Welcome to Ananya's Online Library</h2>
@@ -32,14 +31,15 @@
             <span>customers</span>
           </li>
         </ul>
-        <button class="btn">
+        <a routerLink="/all-books" routerLinkActive="active">
+        <button  class="btn" >
           Go to My Collections <i class="fa-solid fa-arrow-right"></i>
         </button>
+      </a>
       </div>
 
       <div class="swiper-container">
         <div class="imgLoader"></div>
-
         <div class="container">
           <div class="book">
             <div class="gap"></div>
