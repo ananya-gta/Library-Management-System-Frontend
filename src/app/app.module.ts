@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AllBooksComponent } from './all-books/all-books.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HomePageComponent,
     AllBooksComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

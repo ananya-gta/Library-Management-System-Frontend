@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <div class="book-cards">
   <div *ngFor="let book of books" class="book-card">
     <div class="wrap animate pop">
@@ -6,7 +8,7 @@
           <h1 class="animate slide-left pop delay-4">{{ book.title }}</h1>
           <p
             class="animate slide-left pop delay-5"
-            style="color: white; margin-bottom: 2.5rem"
+            style="color: white; margin-bottom: 2.5rem; margin-left: 15px;"
           >
             Genre: <em>{{ book.genre }}</em>
           </p>
