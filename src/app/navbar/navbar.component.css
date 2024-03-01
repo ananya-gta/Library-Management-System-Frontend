@@ -57,9 +57,12 @@
     align-items: center;
 }
 
+
+
 .menu-items{
     order: 2;
     display: flex;
+    margin-left: 100px;
 }
 .logo{
     order: 1;
