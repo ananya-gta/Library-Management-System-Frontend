@@ -140,6 +140,11 @@ p {
 .wrap:hover .image-content {
   width: 30vmin;
 }
+
+.wrap:hover .overlay-content>h1{
+  color: transparent;
+}
+
 .wrap:hover .overlay-content {
   border: none;
   transition-delay: 0.2s;
@@ -248,9 +253,15 @@ p {
 	padding: 10px 20px; /* Adjust padding as needed */
 	border: none;
 	border-radius: 5px;
+  margin-top: -20px;
 	cursor: pointer;
   }
   
+  .issue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .btn:hover {
 	background-color: white;
 	color: black;

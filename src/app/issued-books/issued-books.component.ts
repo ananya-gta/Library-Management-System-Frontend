@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetAllIssuedBooksService } from '../get-all-issued-books.service';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-issued-books',
@@ -10,12 +10,21 @@ export class IssuedBooksComponent
   implements OnInit {
     issuedBooks: any;
   
-    constructor(private apiService: GetAllIssuedBooksService) {}
+    constructor(private apiService: ApiServiceService) {}
   
     ngOnInit(): void {
       this.apiService.getAllIssuedBooks().subscribe((data) => {
-        this.issuedBooks = data.filter((book: { available: any; }) => !book.available);
+        this.issuedBooks = data.filter((myBook: any) => !myBook.issuedBook.available);
         console.log(this.issuedBooks);
       });
+    }
+
+    returnBook(id: number) {
+      this.apiService.returnBook(id);
+      console.log(id);
+    }
+
+    returnBookById() {
+      this.apiService.returnBookById();
     }
 }

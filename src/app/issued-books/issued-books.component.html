@@ -1,1 +1,28 @@
 <app-navbar></app-navbar>
+
+<div id="large-th">
+  <div class="container">
+    <div id="list-th">
+      <div *ngFor="let issuedBook of issuedBooks" class="book read">
+        <div class="cover">
+          <h1 style="font-size: 2.5rem; color: white; padding: 10px">
+            {{ issuedBook?.issuedBook?.title }}
+          </h1>
+          <p
+            style="padding: 10px; text-align: center; color: rgb(226, 217, 217)"
+          >
+            Genre: <strong>{{ issuedBook?.issuedBook?.genre }}</strong
+            ><br />
+            <span class="author"
+              >Author:
+              <strong>{{ issuedBook?.issuedBook?.author }}</strong></span
+            >
+          </p>
+        </div>
+        <div class="description">
+          <button class="btn" (click)="returnBook(issuedBook?.id)">Return Book</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GetAllBooksService } from '../get-all-books.service';
-
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-all-books',
@@ -11,11 +10,14 @@ import { GetAllBooksService } from '../get-all-books.service';
 export class AllBooksComponent implements OnInit {
   books: any;
 
-  constructor(private apiService: GetAllBooksService) {}
+  constructor(
+    private apiService: ApiServiceService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.apiService.getAllBooks().subscribe((data) => {
-      this.books = data.filter((book: { available: any; }) => book.available);
+      this.books = data.filter((book: { available: any }) => book.available);
       console.log(this.books);
     });
   }
