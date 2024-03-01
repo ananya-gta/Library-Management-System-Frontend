@@ -7,6 +7,8 @@ import { AllBooksComponent } from './all-books/all-books.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IssuedBooksComponent } from './issued-books/issued-books.component';
+import { AdminComponent } from './admin/admin.component';
+import { FineComponent } from './fine/fine.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { IssuedBooksComponent } from './issued-books/issued-books.component';
     AllBooksComponent,
     NavbarComponent,
     IssuedBooksComponent,
+    AdminComponent,
+    FineComponent,
   ],
   imports: [
     BrowserModule,

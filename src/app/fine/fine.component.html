@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h2>Fine Details</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">S.No</div>
+        <div class="col col-2">Book Title</div>
+        <div class="col col-3">Amount Due</div>
+        <div class="col col-4">Payment Status</div>
+      </li>
+      <li class="table-row" *ngFor="let book of issuedBooks; let i = index;">
+        <div class="col col-1" data-label="Index">{{i+1}}</div>
+        <div class="col col-2" data-label="Book Title">{{book?.issuedBook?.title}}</div>
+        <div class="col col-3" data-label="Amount Due">Rs. {{book?.fine?.fineAmount}}</div>
+        <div class="col col-4" data-label="Payment Status">Pending</div>
+      </li>
+    </ul>
+  </div>
