@@ -1,18 +1,13 @@
-<nav class="navbar">
-    <div class="navbar-container container">
-        <input type="checkbox" name="" id="">
-        <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-        </div>
-        <ul class="menu-items">
-            <li><a href="#">Home</a></li>
-            <li><a routerLink="/all-books">All Books</a></li>
-            <li><a routerLink="/issued-books">My Books</a></li>
-            <li><a routerLink="/fine">My Fine</a></li>
-            <li><a href=""><button class="btn log">Log Out</button></a></li>
-        </ul>
-        <h1 class="logo">Ananya's Library</h1>
-    </div>
+<nav class="nav-bar">
+  <div class="nav1">
+    <a routerLink="/all-books">All Books</a>
+    <input type="text" id="search_book" placeholder="Search Book" />
+  </div>
+  <h3>Ananya's Library</h3>
+  <div class="icon-about">
+    <a href="#">Home</a>
+    <a routerLink="/issued-books">My Books</a>
+    <a routerLink="/fine">My Fine</a>
+    <a href=""><button class="btn log">Log Out</button></a>
+  </div>
 </nav>
