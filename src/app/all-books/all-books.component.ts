@@ -21,4 +21,18 @@ export class AllBooksComponent implements OnInit {
       console.log(this.books);
     });
   }
+
+  issueBook(book: any) {
+    this.apiService.issueBook(book).subscribe({
+      next: () => {
+        const index = this.books.findIndex((issueBook: any) => issueBook.bookId === book.bookId);
+        if (index !== -1) {
+          this.books.splice(index, 1);
+        } else {
+          console.log('Error in issuing book');
+        }
+      },
+    });
+    console.log(book);
+  }
 }

@@ -6,13 +6,20 @@
       <div class="overlay">
         <div class="overlay-content animate slide-left delay-2">
           <h1 class="animate slide-left pop delay-4">{{ book.title }}</h1>
-          
+          <div>
+          <p
+            class="animate slide-left pop delay-5"
+            style="color: white; margin-left: 15px;"
+          >
+            <em>{{ book.author }}</em>
+          </p>
           <p
             class="animate slide-left pop delay-5"
             style="color: white; margin-bottom: 2.5rem; margin-left: 15px;"
           >
             Genre: <em>{{ book.genre }}</em>
           </p>
+        </div>
         </div>
         <div class="image-content animate slide delay-5"></div>
         <div class="dots animate">
@@ -44,7 +51,7 @@
         <div class="issue">
           <p><strong><em>Did you like the book teaser ?</em></strong></p>
 
-        <button class="btn">Issue Book</button>
+        <button (click)="issueBook(book)" class="btn">Issue Book</button>
         </div>
         
       </div>

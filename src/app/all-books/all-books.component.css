@@ -15,7 +15,7 @@ body {
 
 .book-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: linear-gradient(
     to bottom,
     #6d686c 5%,
@@ -34,15 +34,15 @@ p {
   font-size: max(10pt, 2.5vmin);
   line-height: 1.4;
   color: #000000;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .wrap {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 420px;
-  height: 500px;
+  width: 320px;
+  height: 400px;
   margin: 2rem auto;
   border: 2px solid rgb(165, 160, 160);
   /* border-image: linear-gradient(-50deg, green, #00b300, forestgreen, green, lightgreen, #00e600, green) 1; */
@@ -64,14 +64,14 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 15vmin;
+  /* width: 15vmin; */
   height: 100%;
   padding: 0.5rem 0 0 0.5rem;
   border: 3px solid;
   border-image: linear-gradient(
       to bottom,
-      #6d686c 5%,
-      rgb(71, 70, 72) 35% 65%,
+      #aaa9aa 5%,
+      rgb(130, 129, 132) 35% 65%,
       #cbc3c7 95%
     )
     0 0 0 100%;
@@ -123,7 +123,7 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60vmin;
+  /* width: 60vmin; */
   height: 100%;
   padding: 3vmin 4vmin;
   background: #fff;
@@ -141,7 +141,11 @@ p {
 }
 
 .wrap:hover .overlay-content>h1{
-  color: transparent;
+  display: none;
+}
+
+.wrap:hover .overlay-content p {
+  display: none;
 }
 
 .wrap:hover .overlay-content {
@@ -254,10 +258,12 @@ p {
 	border-radius: 5px;
   margin-top: -20px;
 	cursor: pointer;
+  white-space: nowrap;
   }
   
   .issue {
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
   }

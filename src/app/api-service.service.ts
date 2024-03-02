@@ -21,15 +21,14 @@ export class ApiServiceService {
   }
 
   private returnBookApiUrl = "http://localhost:8080/issueBook/returnBook/";
-  returnBook(id: number): any {
+  returnBook(id: number): Observable<string> {
     console.log(`${this.returnBookApiUrl + id}`);
-    return this.http.get<any>(`${this.returnBookApiUrl + id}`);
+    return this.http.get(`${this.returnBookApiUrl + id}`, {responseType: "text"});
   }
 
-  //hard core issuedBookId
-  private returnBookByIdApiUrl = "http://localhost:8080/issueBook/returnBook/12";
-  returnBookById(): Observable<any> {
-    console.log(`${this.returnBookByIdApiUrl}`);
-    return this.http.get<any>(`${this.returnBookByIdApiUrl}`);
+  private issueBookApiUrl = "http://localhost:8080/issueBook/5"
+  issueBook(book: any): Observable<string> {
+    return this.http.post(`${this.issueBookApiUrl}`, book, {responseType: "text"});
   }
+
 }
