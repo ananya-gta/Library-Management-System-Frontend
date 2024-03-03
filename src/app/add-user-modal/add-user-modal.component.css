@@ -1,0 +1,29 @@
+body {
+    background: #f7f7f7;
+  }
+  
+  .form-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 50px;
+    background: #ffffff;
+    border: 10px solid #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h1, p {
+    text-align: center;
+    margin-bottom: 1.75rem;
+    letter-spacing: -0.025em !important;
+    font-size: 1.75rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -9,6 +12,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IssuedBooksComponent } from './issued-books/issued-books.component';
 import { AdminComponent } from './admin/admin.component';
 import { FineComponent } from './fine/fine.component';
+import { AddBookModalComponent } from './add-book-modal/add-book-modal.component';
+import { AddUserModalComponent } from './add-user-modal/add-user-modal.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,15 +26,11 @@ import { FineComponent } from './fine/fine.component';
     IssuedBooksComponent,
     AdminComponent,
     FineComponent,
+    AddBookModalComponent,
+    AddUserModalComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

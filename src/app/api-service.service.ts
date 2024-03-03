@@ -31,4 +31,13 @@ export class ApiServiceService {
     return this.http.post(`${this.issueBookApiUrl}`, book, {responseType: "text"});
   }
 
+  private addUserApiUrl = "http://localhost:8080/user/add"
+  addUser(user: any):Observable<String>{
+    return this.http.post(`${this.addUserApiUrl}`, user ,{ responseType : "text" });
+  }
+
+  private addBookApiUrl = "http://localhost:8080/book/add"
+  addBook(book: any):Observable<String>{
+    return this.http.post(`${this.addBookApiUrl}`, book ,{ responseType : "text" });
+  }
 }
