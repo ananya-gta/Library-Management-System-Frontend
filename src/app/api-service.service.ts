@@ -14,10 +14,21 @@ export class ApiServiceService {
     return this.http.get<any>(`${this.allBooksApiUrl}`);
   }
 
+  private allUsersApiUrl = "http://localhost:8080/user/get";
+  getAllUsers(): Observable<any[]>{
+    return this.http.get<any>(`${this.allUsersApiUrl}`);
+  }
+
   private issuedBooksByUserApiUrl = "http://localhost:8080/issueBook/getDetailsByUserId/5";
   getAllIssuedBooks(): Observable<any> {
     console.log(`${this.issuedBooksByUserApiUrl}`);
     return this.http.get<any>(`${this.issuedBooksByUserApiUrl}`);
+  }
+
+  private allIssuedBooksApiUrl = "http://localhost:8080/issueBook/getIssuedBookDetails";
+  getAllIssuedBooksDetails(): Observable<any> {
+    console.log(`${this.allIssuedBooksApiUrl}`);
+    return this.http.get<any>(`${this.allIssuedBooksApiUrl}`);
   }
 
   private returnBookApiUrl = "http://localhost:8080/issueBook/returnBook/";

@@ -11,10 +11,10 @@ export class AddBookModalComponent {
   constructor(private apiService: ApiServiceService) {}
 
   addBook(event: Event, formData: any) {
-    event.preventDefault();
     if (formData.title && formData.author && formData.genre) {
       this.apiService.addBook(formData).subscribe();
       console.log(formData);
     }
+    alert("Book added successfully.");
   }
 }

@@ -15,5 +15,6 @@ constructor(private apiService: ApiServiceService){}
       this.apiService.addUser(formData).subscribe();
       console.log(formData);
     }
+    alert("User added successfully.");
   }
 }
