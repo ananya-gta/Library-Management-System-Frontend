@@ -15,6 +15,7 @@ import { FineComponent } from './fine/fine.component';
 import { AddBookModalComponent } from './add-book-modal/add-book-modal.component';
 import { AddUserModalComponent } from './add-user-modal/add-user-modal.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateBookModalComponent } from './update-book-modal/update-book-modal.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     FineComponent,
     AddBookModalComponent,
     AddUserModalComponent,
+    UpdateBookModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [provideClientHydration()],
