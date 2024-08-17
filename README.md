@@ -7,4 +7,4 @@ This project is made with [Angular CLI](https://github.com/angular/angular-cli).
 
 
 ## Admin Dashboard
-[Admin Dashboard of library  management.webm](https://github.com/ananya-gta/Library-Management-System-Frontend/assets/64327691/8746c0d1-9196-4faa-82c7-1254acb2c8f7)
+[Admin Dashboard of library management.webm](https://github.com/ananya-gta/Library-Management-System-Frontend/assets/64327691/8746c0d1-9196-4faa-82c7-1254acb2c8f7)
